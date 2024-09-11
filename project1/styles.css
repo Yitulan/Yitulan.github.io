@@ -1,0 +1,37 @@
+body{
+  background-color:bisque;
+}
+h1 {
+    color: rgb(173, 104, 13);
+    text-align: center;
+  }
+  p {
+    color: rgb(5, 6, 5);
+  }
+
+.backgroundpicture {
+  position: relative; /* 相对定位，作为其他元素的参照点 */
+  width: 100%; /* 根据需要调整宽度 */
+ 
+}
+
+.backgroundpicture img {
+  width: 100%; /* 让图片填满容器 */
+ 
+  display: block; /* 去除图片下方的空白间隙 */
+}
+
+/* 设置标题的样式 */
+.character, .storybackground, .content {
+  position: relative; /* 相对定位 */
+  left: 0; /* 与背景图片的最左端对齐 */
+}
+
+/* 可选：如果你希望标题与图片顶部对齐，可以设置顶部边距 */
+.character h2, .storybackground h2, .content h2,.login h2 {
+  margin-top: 0; /* 根据需要调整 */
+}
+  
+  
+
+  

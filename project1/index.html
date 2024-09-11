@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+    <title>欢迎来到三边坡</title>
+    <style>
+        .d1>* {
+            vertical-align: middle;
+        }
+        .login {
+            margin-bottom: 20px; /* 为登录区域添加一些底部边距 */
+        }
+        #welcomeMessage {
+            margin-top: 10px; /* 欢迎信息与输入框之间的间距 */
+            font-size: 16px; /* 设置字体大小 */
+            color: #333; /* 设置字体颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>在这片土地上，暴力只会隐藏，不会消散</h1>
+    <div class="backgroundpicture">
+        <img src="image/background.png" alt="背景图" width="1000" height="300"/>
+    </div>
+
+    <div class="login">
+        <h2>请输入用户名</h2>
+        <input id="username" type="text" placeholder="请输入用户名" />
+        <p id="welcomeMessage"></p> <!-- 用于显示欢迎信息 -->
+    </div>
+    <script>
+        var imgObj = document.querySelector("img");
+        imgObj.addEventListener("click", function() {
+            this.src = "image/background2.png";
+        });
+
+        // 监听输入框的 keydown 事件
+        document.getElementById('username').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                var username = this.value;
+                document.title = username + '，欢迎来到三边坡';
+                document.getElementById('welcomeMessage').textContent = username + '，欢迎来到三边坡'; // 更新欢迎信息
+                event.preventDefault(); // 阻止默认的 Enter 键行为（如果有的话，比如表单提交）
+            }
+        });
+    </script>
+    
+    <div class="character">
+        <h2>主要角色</h2>
+        <img src="image/沈星.jpg" alt="沈星" width="300" height="400"/>
+        <img src="image/猜叔.jpg" alt="猜叔" width="300" height="400"/>  
+        <img src="image/但拓.jpg" alt="但拓" width="300" height="400"/>
+        <img src="image/吴海山.jpg" alt="吴海山" width="300" height="400"/>
+        <img src="image/王安全.jpg" alt="王安全" width="300" height="400"/>
+    </div>
+
+    <div class="storybackground">
+        <h2>故事背景</h2>
+        <p>《边水往事》以虚构的边境城市“三边坡”，这个在剧情中被描绘为一个位于东南亚的边陲地带为背景,涉及宗教、赌坊、物流、伐木、军事冲突等利益交错，以及利益漩涡里错综复杂的人物关系.</p>
+    </div>
+
+    <div class="content">
+        <h2>主要内容</h2>
+        <p>主角沈星为了投奔在"三边坡"做工程的舅舅，来到了神秘又危险的三边坡。然而,舅舅却因卷入当地势力纷争而失踪，为了寻找舅舅，沈星不得不加入当地一个由猜叔领导的组织，并逐渐卷入了一场复杂的势力斗争.</p>
+    </div>
+  
+    <h2>
+        若想了解详细剧情与幕后花絮，请关注
+        <a href="https://weibo.com/u/7817807789">《边水往事》官方微博</a>. 
+    </h2>
+    
+</body>
+</html>
+<!DOCTYPE html>
